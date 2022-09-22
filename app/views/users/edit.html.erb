@@ -1,0 +1,28 @@
+<main class="d-flex flex-column vh-100">
+        <p id="notice"></p>
+        <div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+    <h2>User info</h2>
+
+
+<div class="field" >
+   <%= form_with model: @user do |f| %>
+  <h4>Name</h4>
+  <%= f.text_field :name, value: @title %>
+</div>
+<div class="field">
+  <h4>Image</h4>
+  <%= f.file_field :profile_image, accept: "image/*" %>
+</div>
+<div class="field">
+  <h4>Introduction</h4>
+  <%= f.text_area :introduction %>
+</div>
+<div class= "field">
+  <%= f.submit 'Update User' %>
+</div>
+
+<% end %>
+
+      </div></main>
